@@ -17,3 +17,5 @@ int main(){
         printf("Il cubo di %d : %d\n", i, (i*i*i));
     }
 } 
+
+///PROVA PER GIT
