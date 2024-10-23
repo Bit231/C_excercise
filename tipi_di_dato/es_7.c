@@ -41,17 +41,42 @@ int main(){
         printf("%d", 4);
     }break;
 
-        case 'M':
+    case 'M':
     case 'N':
     case 'O':{
         printf("%d", 5);
     }break;
 
+    case 'P':
+    case 'Q':
+    case 'R':{
+        printf("%d", 6);
+    }break;
 
+    case 'S':
+    case 'T':{
+        printf("%d", 7);
+    }break;
 
+    case 'U':
+    case 'V':{
+        printf("%d", 8);
+    }break;
+
+    case 'W':
+    case 'X':{
+        printf("%d", 9);
+    }break;
+
+    case 'Y':
+    case 'Z':{
+        printf("%d", 0);
+    }break;
+
+    
         }
-
-    }while(c == 'LF');
+        scanf("%c", &c); //Lo leggo dopo perchè prima ho già un carattere letto
+    }while(c != '\n');
 
 
 }
