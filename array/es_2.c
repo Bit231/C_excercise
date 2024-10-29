@@ -11,8 +11,8 @@ int main(){
     
         printf("Sequenza numerica: ");
     for(int i=0; i< dim; i++){
-        numeri[i]=(rand() % 80 - 10 +1) + 10;
-        printf(" %d", numeri[i]);
+        numeri[i]=(rand() % 71) + 10;
+        printf(" %d\n", numeri[i]);
     }
     printf("\n");
 }
