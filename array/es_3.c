@@ -8,21 +8,24 @@ prima occorrenza del numero cercato)*/
 #include<stdlib.h>
 #include<stdbool.h>
 
+#define DIM (100); //Costante utilizzata come dimensione dell'array
 int main(){
-    int dim=100, val; 
-    int numeri[dim];
+    int val; 
+    int numeri[DIM];
     bool trovato= false;
-    for(int i=0; i< dim; i++){
+    //Riempio l'array
+    for(int i=0; i< DIM; i++){
         numeri[i]=(rand() % 71) + 10;
     }
 
     printf("Inserire numero da ricercare: ");
     scanf("%d", &val);
 
-    for (int i = 0; i < dim; i++){
+    //Ciclo in cui effettua la ricerca
+    for (int i = 0; i < DIM; i++){
         if(val==numeri[i]){
             printf("Numero trovato in posizione: %d\n", i);
-            trovato=true;
+            trovato=true; //Trovato diventa true per non far stampare che non l'ha trovato
             break;
         }
     }

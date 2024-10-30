@@ -19,7 +19,6 @@ int main(){
     }
 
     //Ordinamento
-
     for(int i=0; i<dim; i++){
         for(int j=0; j<dim; j++){
         if(numeri[j] > numeri[j+1]){
@@ -31,6 +30,7 @@ int main(){
         }
     }
 
+    //Stampo la sequenza ordinata
     printf("\nSequenza di numeri ordinata: ");
     for(int i=0; i< dim; i++){
         if(numeri[i] != 0)
@@ -40,11 +40,13 @@ int main(){
 
     for(int i=0; i< dim; i++){
         indrand=rand() % 100; //Genera indice da 0 a 99
-        temp=numeri[indrand];
+        //Scambio dei due valori
+        temp=numeri[indrand]; 
         numeri[indrand]=numeri[i];
-        numeri[i]=temp; //Scambiato i due valori
+        numeri[i]=temp;
     }
 
+    //Stampo la sequenza finale
     printf("\nSequenza di numeri disordinata: ");
     for(int i=0; i< dim; i++){
         if(numeri[i] != 0)
