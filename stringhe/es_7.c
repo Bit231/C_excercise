@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 /*
-7. come il (6) in cui però si convertono anche:
+7. come il (6) in cui perï¿½ si convertono anche:
    B -> |3
    D -> |)
    R -> |2
@@ -26,22 +26,9 @@ int main(){
 
 
             case 'B':
-            case 'b':{
-                char temp[400]="";
-                int cont=0;
-            for(int j=i+1; j<400; j++){
-                temp[cont]=frase[j];
-                cont++;
-            }
-                frase[i]='|';
-                frase[i+1]='3';
-                cont=0;
+            case 'b':
 
-                for(int j=i+2; j<400; j++){
-                    frase[j]=temp[cont];
-                    cont++;
-                }
-            break;}
+            break;
 
             case 'E':
             case 'e':
