@@ -25,13 +25,11 @@ int *array=calloc(dim, sizeof(int)); //calloc(n elementi, size)
 int *array2=calloc(dim,sizeof(int));
 
 printf("Indirizzi del primo array: \n");
-
 for(int i=0; i<dim; i++){
     printf("Indirizzo posizione %d: %p\n", i, &array[i]);
 }
 
 printf("Indirizzi del secondo array: \n");
-
 for(int i=0; i<dim; i++){
     printf("Indirizzo posizione %d: %p\n", i, &array2[i]);
 }
@@ -41,35 +39,30 @@ for(int i=0; i<dim; i++){
  array=realloc(array, sizeof(int)*(dim));
  array2=realloc(array2,sizeof(int)*(dim));
 
-
+//Dimensione aumentata di 100
 printf("Indirizzi del primo array dimensione 200: \n");
-
 for(int i=0; i<dim; i++){
     printf("Indirizzo posizione %d: %p\n", i, &array[i]);
 }
 
 printf("Indirizzi del secondo array dimensione 200: \n");
-
 for(int i=0; i<dim; i++){
     printf("Indirizzo posizione %d: %p\n", i, &array2[i]);
 }
 
-//Accorcia con realloc
-
+//Diminuisco la dimensione dell'array con realloc
 dim=50;
 
  array=realloc(array, sizeof(int)*(dim));
  array2=realloc(array2,sizeof(int)*(dim));
 
-
+//Stampo l'array con dimensione 50
 printf("Indirizzi del primo array dimensione 50: \n");
-
 for(int i=0; i<dim; i++){
     printf("Indirizzo posizione %d: %p\n", i, &array[i]);
 }
 
 printf("Indirizzi del secondo array dimensione 50: \n");
-
 for(int i=0; i<dim; i++){
     printf("Indirizzo posizione %d: %p\n", i, &array2[i]);
 }

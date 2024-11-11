@@ -17,14 +17,17 @@ scanf("%d", &dim);
 
 float *array=malloc(sizeof(float) * dim); //Alloco dim celle di memoria per l'array
 
+//Inizializzo l'array a 0
 for(int i=0; i<dim; i++){
     array[i]=0;
 }
 
+//Stampa dell'array
 for(int i=0; i<dim; i++){
     printf("Valore in posizione %d: %f\n", i, array[i]);
 }
 
+//Inserimento valori
 for(int i=0; i<dim; i++){
     printf("Inserire valore float: ");
     scanf("%f", &array[i]);
@@ -32,6 +35,7 @@ for(int i=0; i<dim; i++){
 
 printf("\n");
 
+//Stampa inversa post inserimento
 for(int i=dim-1; i>=0; i--){
     printf("Valore in posizione %d: %f\n", i, array[i]);
 }

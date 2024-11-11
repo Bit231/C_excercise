@@ -16,7 +16,7 @@ int *p1, *p2, *psum;
 
 printf("Inserisci primo numero: ");
 scanf("%d", &i1);
-p1=&i1;
+p1=&i1; //Assegno al puntatore l'indirizzo della variabile
 
 printf("Inserisci secondo numero: ");
 scanf("%d", &i2);
@@ -24,8 +24,7 @@ p2=&i2; //Assegno l'indirizzo di memoria
 
 psum=&sum;
 
-*psum=*p1+*p2;
-
+*psum=*p1+*p2; //Faccio la somma dei valori contenuti nei puntatori
 
 printf("Indirizzo della variabili x: %d\n", *psum);
 

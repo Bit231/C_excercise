@@ -19,11 +19,11 @@ scanf("%d", &x);
 
 p=&x; //Assegno l'indirizzo di memoria
 
-printf("Indirizzo della variabili x: %p\n", p);
-printf("Contenuto della variabile puntatore p: %p\n", p);
-printf("Indirizzo della variabile p: %p\n", &p);
-printf("Indirizzo della variabili x: %d\n", x);
-printf("Contenuto dell'indirizzo contenuto in p: %d\n", *p);
+printf("Indirizzo della variabili x: %p\n", &x); //& per l'indirizzo
+printf("Contenuto della variabile puntatore p: %p\n", p); //Il contenuto della variabile x è l'indirizzo
+printf("Indirizzo della variabile p: %p\n", &p); //Indirizzo della variabile puntatore
+printf("Contenuto della variabile x: %d\n", x); //Contenuto classico
+printf("Contenuto dell'indirizzo contenuto in p: %d\n", *p); //* Contenuto della variabile a cui punta
 
 
 

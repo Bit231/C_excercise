@@ -12,25 +12,21 @@ uscire dal programma.
 int main(){
 
 int dim;
-float numero;
 
 printf("Inserire dimensione memoria: ");
 scanf("%d", &dim);
 
-float *array=malloc(sizeof(int) * dim); //Alloco dim celle di memoria per l'array
+float *array=malloc(sizeof(float) * dim); //Alloco n celle di memoria per l'array, la dimensione dell'array equivale a dim, sizeof ci restituisce la dimensione del float
 
-   if(!array) // equivalente a a==NULL
- {     printf("ERRORE: non e' stato possibile allocare la memoria richiesta per %lu interi (%d byte)\n", dim, dim*sizeof(int));     exit(1);
-   }
-
+//Inserimento dei valori float
 for(int i=0; i<dim; i++){
     printf("Inserire valore float: ");
-    scanf("%f", &numero);
-    array[i]=numero;
+    scanf("%f", &array[i]);
 }
 
 printf("\n");
 
+//Stampo i valori nell'ordine inverso
 for(int i=dim-1; i>=0; i--){
     printf("Valore in posizione %d: %f\n", i, array[i]);
 }

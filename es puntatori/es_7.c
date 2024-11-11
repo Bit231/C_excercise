@@ -4,7 +4,7 @@
 /*
 7. si riprenda l'esercizio E01.11. Si memorizzi la sequenza ottenuta
 nel ciclo (b) usando array allocato dinamicamente. Dato che la
-lunghezza della sequenza è ignota a priori si usi realloc() per
+lunghezza della sequenza ï¿½ ignota a priori si usi realloc() per
 estendere l'array man mano che vengono generati i numeri.
 Stampare la sequenza ottenuta solo al termine del ciclo.
 */
@@ -13,27 +13,28 @@ Stampare la sequenza ottenuta solo al termine del ciclo.
     printf("Dammi un numero n: ");
     scanf("%d", &n);
 
-    int *array=malloc(sizeof(int));
-   int lungh = 0;
+  int *array=NULL; //Puntatore a int per salvare i numeri
+   int lungh = 0; // usata con realloc per inserire sempre la nuova memoria
 
    // PUNTO b
    while(n != 1){
+      lungh++; //Incremento la dimensione dell'array
    // PUNTO c
     printf("%d ", n);
 
      // PUNTO d
     if(n%2){
        n = 3*n + 1;
-        array=realloc(array, sizeof(int)+1);
-        array[lungh]=n;
+        array=realloc(array, sizeof(int)*lungh); //Aggiungo un elemento, incremento la dimensione dell'array orima di farlo
+        array[lungh-1]=n;
     }else{
       n = n/2;
-    array=realloc(array, sizeof(int)+1);
-    array[lungh]=n;
+    array=realloc(array, sizeof(int)*lungh);
+    array[lungh-1]=n;
     }
-     ++lungh; // incremento il numero di ripetizioni  }
+     } // incremento il numero di ripetizioni
    printf("\nLa sequenza ottenuta e' formata da %d numeri\n", lungh);
- }
+ 
   // anche un for() era utilizzabile
   // for(lungh = 0; n != 1; ++lungh)
    //   if(n%2)...

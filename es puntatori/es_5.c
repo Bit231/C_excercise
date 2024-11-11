@@ -14,16 +14,18 @@ sempre di short. Si ricopi il contenuto del primo array nel secondo.
 
 int main(){
 
-srand(time(0));
-int dim=rand()%(21)+80;
+srand(time(NULL));
+int dim=rand()%(21)+80; //genero la dimensione randomicamente
 short int array[dim]; //VLA, Dimensione definita in runtime
 
+//Riempio l'array con valori casuali
 for(int i=0; i<dim; i++){
     array[i]=rand()%(20)+1;
 }
-
+//Definisco l'array allocato dinamicamente
 short int *array2=malloc(sizeof(short int) * dim); //Array dinamico
 
+//Copio i valori
 for(int i=0; i<dim; i++){
     array2[i]=array[i];
 }
