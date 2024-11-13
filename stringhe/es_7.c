@@ -10,7 +10,12 @@
 */
 
 int main(){
-    char frase[400]="";
+    
+    int dim=400;
+    char frase[dim];
+    char frase_tradotta[dim];
+    int cont=0;
+
 
     printf("Inserire frase: ");
     scanf(" %[^\n]", &frase);
@@ -21,50 +26,93 @@ int main(){
         switch(frase[i]){
             case 'A':
             case 'a':
-                frase[i]='4';
+                frase_tradotta[cont]='4';
+                cont++;
             break;
 
 
             case 'B':
             case 'b':
+                frase_tradotta[cont]='|';
+                frase_tradotta[cont+1]='3';
+                cont+=2;
+            break;
 
+            case 'D':
+            case 'd':
+                frase_tradotta[cont]='|';
+                frase_tradotta[cont+1]=')';
+                cont+=2;
             break;
 
             case 'E':
             case 'e':
-                frase[i]='3';
-                break;
+                frase_tradotta[cont]='3';
+                cont++;
+            
+            break;
 
 
             case 'G':
             case 'g':
-                frase[i]='6';
+                frase_tradotta[cont]='6';
+                cont++;
             break;
 
             case 'I':
             case 'i':
-                frase[i]='1';
+                frase_tradotta[cont]='1';
+                cont++;
+
             break;
 
             case 'O':
             case 'o':
-                frase[i]='0';
+                frase_tradotta[cont]='0';
+                cont++;
+   
+            break;
+
+            case 'R':
+            case 'r':
+                frase_tradotta[cont]='|';
+                frase_tradotta[cont+1]='2';
+                cont+=2;
             break;
 
             case 'S':
             case 's':
-                frase[i]='5';
+                frase_tradotta[cont]='5';
+                cont++;
             break;
 
             case 'T':
             case 't':
-                frase[i]='7';
+                frase_tradotta[cont]='7';
+                cont++;
+    
             break;
+
+            case 'U':
+            case 'u':
+                frase_tradotta[cont]='(';
+                frase_tradotta[cont+1]='_';
+                frase_tradotta[cont+2]=')';
+                cont+=3;
+            break;
+
+            default:{
+                frase_tradotta[cont]=frase[i];
+                cont++;
+                break;
+            }
+
+
         }
 
 
     }
 
-    printf("%s", frase);
+    printf("%s\n", frase_tradotta);
 }
 
