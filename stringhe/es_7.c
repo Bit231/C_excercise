@@ -10,9 +10,13 @@
 */
 
 int main(){
-    char frase[400]="";
-    char frase_tradotta[400]="";
+    
+    int dim=400;
+    char frase[dim];
+    char frase_tradotta[dim];
     int cont=0;
+
+
     printf("Inserire frase: ");
     scanf(" %[^\n]", &frase);
 
@@ -32,21 +36,22 @@ int main(){
             case 'b':
                 frase_tradotta[cont]='|';
                 frase_tradotta[cont+1]='3';
-                cont=cont+2;
+                cont+=2;
             break;
 
             case 'D':
             case 'd':
                 frase_tradotta[cont]='|';
                 frase_tradotta[cont+1]=')';
-                cont=cont+2;
+                cont+=2;
             break;
 
             case 'E':
             case 'e':
                 frase_tradotta[cont]='3';
                 cont++;
-                break;
+            
+            break;
 
 
             case 'G':
@@ -65,13 +70,14 @@ int main(){
             case 'o':
                 frase_tradotta[cont]='0';
                 cont++;
+   
             break;
 
             case 'R':
             case 'r':
                 frase_tradotta[cont]='|';
                 frase_tradotta[cont+1]='2';
-                cont=cont+2;
+                cont+=2;
             break;
 
             case 'S':
@@ -91,13 +97,21 @@ int main(){
                 frase_tradotta[cont]='(';
                 frase_tradotta[cont+1]='_';
                 frase_tradotta[cont+2]=')';
-                cont=cont+3;
+                cont+=3;
             break;
+
+            default:{
+                frase_tradotta[cont]=frase[i];
+                cont++;
+                break;
+            }
+
+
         }
 
 
     }
 
-    printf("%s", frase_tradotta);
+    printf("%s\n", frase_tradotta);
 }
 

@@ -18,11 +18,12 @@ int main(){
 
     printf("Inserire frase: ");
     scanf(" %[^\n]", &frase);
-    int lung=strlen(frase);
+    //int lung=strlen(frase);
 
     //Conversione in 133t
-    for(int i=0; i<lung; i++){
-        switch(frase[i]){
+    //For per scorrere la stringa iniziale
+    for(int i=0; i<strlen(frase); i++){
+        switch(frase[i]){ //In base al carattere entra nel case ed effettua la conversione
             case 'A':
             case 'a':
                 frase[i]='4';
@@ -63,5 +64,5 @@ int main(){
 
     }
 
-    printf("%s", frase);
+    printf("%s", frase); //Stampo la stringa
 }
