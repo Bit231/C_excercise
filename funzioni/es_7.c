@@ -9,26 +9,23 @@
 
 
 void scambio(int* pA,int* pB){
-    int* c;
-    *c=*pA;
+    int tmp; //Salvo i contenuti per scambiarli
+    //Scambio i contenuti degli indirizzi
+    tmp=*pA;
     *pA=*pB;
-    *pB=*c;
+    *pB=tmp;
 }
 
 int main(){
     int a,b;
-    int* pA;
-    int* pB;
+
     printf("Inserire primo numero: ");
     scanf("%d", &a);
 
     printf("Inserire secondo numero: ");
     scanf("%d", &b);
 
-    pA=&a;
-    pB=&b;
-
-    scambio(pA, pB);
+    scambio(&a, &b); //Passo l'indirizzo della variabile così ogni variazione verrà replicata sull'indirizzo e quindi direttamente sulla variabile
 
     printf("%d %d\n", a, b);
     
