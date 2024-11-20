@@ -12,7 +12,7 @@
 */
 
 bool bisestile(int anno){
-    if((anno%4==0 && anno%100!=0) || (anno%400==0)){ //Chiedere
+    if((anno%4==0) || (anno%400==0 && anno%100!=0)){ //Sarebbe anno divisibile per oppure quando è divisibile per 400 ma non per 100
         return true;
     }else{
         return false;

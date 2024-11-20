@@ -8,17 +8,24 @@
 */
 
 int ismax(int a, int b){
-    if(a>b){
+    //Confronto tra i primi due valori
+    /*
+    if(a>b){ 
         return a;
     }else{
         return b;
-    }
+    }*/
+   return(a > b)?a:b;
+    //Operatore ternario (if in linea) return(a > b ? a:b)
 }
 
 int max4(int c, int d, int maxAB){
-    int max=ismax(c, d);
-    max=ismax(max, maxAB);
+/*
+    int max=ismax(c, d); //Massimo tra gli altri due valori inseriti
+    max=ismax(max, maxAB); //Massimo tra il massimo di a,b e massimo di c,d
     return max;
+*/
+    return ismax(ismax(c,d), maxAB); //Il massimo tra i due massimi
 }
 
 int main(){
@@ -30,7 +37,7 @@ int main(){
     printf("Inserire il secondo valore: ");
     scanf("%d", &b);
 
-    max=ismax(a,b);
+    max=ismax(a,b); //Massimo tra i primi due valori
 
     printf("Il massimo tra %d e %d e': %d\n", a, b, max);
 

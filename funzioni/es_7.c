@@ -8,29 +8,29 @@
 */
 
 
-void scambio(int a,int b){
-    int* pA=&a;    
-    int* pB=&b;
+void scambio(int* pA,int* pB){
     int* c;
-
-    c=pA;
-    pA=pB;
-    pB=c;
+    *c=*pA;
+    *pA=*pB;
+    *pB=*c;
 }
 
 int main(){
     int a,b;
-
+    int* pA;
+    int* pB;
     printf("Inserire primo numero: ");
     scanf("%d", &a);
-    printf("%p", &a);
 
     printf("Inserire secondo numero: ");
     scanf("%d", &b);
 
-    scambio(a, b);
+    pA=&a;
+    pB=&b;
 
-    printf("%d %d", a, b);
+    scambio(pA, pB);
+
+    printf("%d %d\n", a, b);
     
 
 }

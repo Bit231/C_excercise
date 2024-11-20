@@ -8,73 +8,25 @@
    "Trenta giorni ha novembre, con april, giugno e settembre..."
 */
 
-bool check_data(int giorno, int mese, int anno){
-    if(anno>2024 || giorno>31 || mese>12)return false;
-    
-    switch (mese){
-        case 1:
-            if(giorno>31)return false;
-            else return true;
-        break;
-        
-        case 2:
-            if(giorno>28)return false;
-            else return true;
-        break;
-
-        case 3:
-            if(giorno>31)return false;
-            else return true;
-        break;
-        
-        case 4:
-            if(giorno>30)return false;
-            else return true;
-        break;
-        
-        case 5:
-            if(giorno>31)return false;
-            else return true;
-        break;
-        
-        case 6:
-            if(giorno>30)return false;
-            else return true;
-        break;
-        
-        case 7:
-            if(giorno>31)return false;
-            else return true;
-        break;
-        
-        case 8:
-            if(giorno>31)return false;
-            else return true;
-        break;
-        
-        case 9:
-            if(giorno>30)return false;
-            else return true;
-        break;
-        
-        case 10:
-            if(giorno>31)return false;
-            else return true;
-        break;
-
-        case 11:
-            if(giorno>30)return false;
-            else return true;
-        break;
-
-        case 12:
-            if(giorno>31)return false;
-                else return true;
-        break;
-
-    default:
-        break;
+bool bisestile(int anno){
+    if((anno%4==0) || (anno%400==0 && anno%100!=0)){ //Sarebbe anno divisibile per oppure quando è divisibile per 400 ma non per 100
+        return true;
+    }else{
+        return false;
     }
+}
+
+bool check_data(int giorno, int mese, int anno){
+
+   int days[]={31,28,31,30,30,31,31,30,31,30,31}; //In base all'indice(Il mese) confronto il numero di giorni
+    //controllo bisestile
+
+    if(mese == 2 && bisestile(anno)){
+        days[1] = 29;
+    }
+    
+    if((mese >= 1 && mese<=12) && (giorno>= 1 && giorno <= days[mese-1]))return true;
+    else return false;
 
 }
 
