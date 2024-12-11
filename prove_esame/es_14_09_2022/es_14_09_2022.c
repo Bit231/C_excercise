@@ -131,7 +131,7 @@ void stampa(int *q, int *size){
     int righe=*size;
     int colonne=*size;
 
-    if(!size){
+    if(!q){
         printf("Quadrato vuoto\n");
         return;
     }
@@ -161,7 +161,7 @@ void salva(int *q, int *size){
     }
 
     fwrite(size, sizeof(int), 1, fp); //Scrivo righe e colonne
-    fwrite(q, sizeof(int), righe*colonne, fp);   
+    fwrite(q, sizeof(int), righe*colonne, fp); //fwrite(puntatore da cui prendere i dati, sizeof tipo, quanti ce ne sono, in quale file scriverlo)
 
     fclose(fp);
 }
