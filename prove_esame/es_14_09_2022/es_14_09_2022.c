@@ -77,7 +77,7 @@ int *genera(int *size){
 
     int righe=*size;
     int colonne=*size;
-    int contRighe=0, contColonne=1, numeri=1;
+    int contRighe=0, contColonne=colonne/2, numeri=1;
     int vecchie_col, vecchie_rig;
     /*3. (10) Contenga la funzione int *genera(int *size); che chiede all’utente un numero dispari
     (scrivendolo in *size e verificando che sia effettivamente dispari), genera il relativo
