@@ -1,3 +1,7 @@
 {
-    "C_Cpp.default.compilerPath": "c:\\MinGW\\include\\_mingw.h"
+    "C_Cpp.default.compilerPath": "c:\\MinGW\\include\\_mingw.h",
+    "files.associations": {
+        "string.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
