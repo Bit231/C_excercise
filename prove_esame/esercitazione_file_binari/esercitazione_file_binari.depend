@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1734523979 source:c:\users\aless\desktop\documenti\scuola\universita\informatica\c_excercise\prove_esame\esercitazione_file_binari\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1734542170 source:c:\users\aless\desktop\documenti\scuola\universita\informatica\c_excercise\prove_esame\es_15_01_2024\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1734623414 source:c:\users\aless\desktop\documenti\scuola\universita\informatica\c_excercise\prove_esame\es_4_04_2024_conlettura\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
